@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Leonard's Calculator</title>
+
+<!-- CSS Links -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="assets/css/index.css">
+<!-- End of CSS links -->
+
+  </head>
+  <body onload="loadDate()">
+
+    <header>
+      <div class="header">
+        <p><a href="https://leonardchinyama.github.io/profile/"> <span class="logo">L&#8226;c&#8226;k</span> | Design</a></p>
+      </div>
+    </header>
+
+    <main>
+      <div class="formcontainer">
+          <table>
+
+              <tr>
+                <td colspan="4" id="resultrow"><input type="text" id="result" class="" disabled></td>
+              </tr>
+
+              <tr>
+                <td><button type="button" onclick="updateresult(7)">7</button></td>
+                <td><button type="button" onclick="updateresult(8)">8</button></td>
+                <td><button type="button" onclick="updateresult(9)">9</button></td>
+                <td><button type="button" onclick="updateresult('\&#47;')">&#247;</button></td>
+              </tr>
+
+              <tr>
+                <td><button type="button" onclick="updateresult(4)">4</button></td>
+                <td><button type="button" onclick="updateresult(5)">5</button></td>
+                <td><button type="button" onclick="updateresult(6)">6</button></td>
+                <td><button type="button" id=&#215; onclick="updateresult('\&#42;')">&#215;</button></td>
+              </tr>
+
+              <tr>
+                <td><button type="button" onclick="updateresult(1)">1</button></td>
+                <td><button type="button" onclick="updateresult(2)">2</button></td>
+                <td><button type="button" onclick="updateresult(3)">3</button></td>
+                <td><button type="button" onclick="updateresult('-')">&#8722;</button></td>
+              </tr>
+
+              <tr>
+                <td><button type="button" onclick="updateresult('.')">.</button></td>
+                <td><button type="button" onclick="updateresult(0)">0</button></td>
+                <td><button type="button" onclick="updateresult('\&#37;')">&#37;</button></td>
+                <td><button type="button" onclick="updateresult('+')">&#43;</button></td>
+              </tr>
+
+              <tr>
+                <td><button type="button" onclick="deleteItem()">DEL</button></td>
+                <td><button type="button" onclick="clearInput()">CLR</button></td>
+                <td><button type="button" onclick="returnAnswer()">ANS</button></td>
+                <td><button type="button" onclick="answerandclear()">&#61;</button></td>
+              </tr>
+
+            </table>
+
+      </div>
+
+    </main>
+    <div class="footer">
+      <p>&copy;<span id="datepart"></span> by <a href="https://leonardchinyama.github.io/profile/">Leonard-Kapokolo-Chinyama</a></p>
+    </div>
+
+    <script src="assets/js/index.js"></script>
+
+    <script>
+      document.getElementById("result").addEventListener("change", myFunction);
+
+      function myFunction() {
+        alert("value changed");
+      }
+
+    </script>
+
+  </body>
+</html>
