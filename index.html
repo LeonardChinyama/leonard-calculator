@@ -35,31 +35,31 @@
               </tr>
 
               <tr>
-                <td><button type="button" onclick="updateresult(4)">4</button></td>
-                <td><button type="button" onclick="updateresult(5)">5</button></td>
-                <td><button type="button" onclick="updateresult(6)">6</button></td>
-                <td><button type="button" id=&#215; onclick="updateresult('\&#42;')">&#215;</button></td>
+                <td><button type="button" onclick="myFunction(4)">4</button></td>
+                <td><button type="button" onclick="myFunction(5)">5</button></td>
+                <td><button type="button" onclick="myFunction(6)">6</button></td>
+                <td><button type="button" id=&#215; onclick="myFunction('\&#42;')">&#215;</button></td>
               </tr>
 
               <tr>
-                <td><button type="button" onclick="updateresult(1)">1</button></td>
-                <td><button type="button" onclick="updateresult(2)">2</button></td>
-                <td><button type="button" onclick="updateresult(3)">3</button></td>
-                <td><button type="button" onclick="updateresult('-')">&#8722;</button></td>
+                <td><button type="button" onclick="myFunction(1)">1</button></td>
+                <td><button type="button" onclick="myFunction(2)">2</button></td>
+                <td><button type="button" onclick="myFunction(3)">3</button></td>
+                <td><button type="button" onclick="myFunction('-')">&#8722;</button></td>
               </tr>
 
               <tr>
-                <td><button type="button" onclick="updateresult('.')">.</button></td>
-                <td><button type="button" onclick="updateresult(0)">0</button></td>
-                <td><button type="button" onclick="updateresult('\&#37;')">&#37;</button></td>
-                <td><button type="button" onclick="updateresult('+')">&#43;</button></td>
+                <td><button type="button" onclick="myFunction('.')">.</button></td>
+                <td><button type="button" onclick="myFunction(0)">0</button></td>
+                <td><button type="button" onclick="myFunction('\&#37;')">&#37;</button></td>
+                <td><button type="button" onclick="myFunction('+')">&#43;</button></td>
               </tr>
 
               <tr>
-                <td><button type="button" onclick="deleteItem()">DEL</button></td>
-                <td><button type="button" onclick="clearInput()">CLR</button></td>
-                <td><button type="button" onclick="returnAnswer()">ANS</button></td>
-                <td><button type="button" onclick="answerandclear()">&#61;</button></td>
+                <td><button type="button" onclick="myFunction('deleteItem')">DEL</button></td>
+                <td><button type="button" onclick="myFunction('clearInput')">CLR</button></td>
+                <td><button type="button" onclick="myFunction('returnAnswer')">ANS</button></td>
+                <td><button type="button" onclick="myFunction('answerandclear')">&#61;</button></td>
               </tr>
 
             </table>
@@ -72,15 +72,6 @@
     </div>
 
     <script src="assets/js/index.js"></script>
-
-    <script>
-      document.getElementById("result").addEventListener("change", myFunction);
-
-      function myFunction() {
-        alert("value changed");
-      }
-
-    </script>
 
   </body>
 </html>

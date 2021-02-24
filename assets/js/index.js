@@ -3,11 +3,27 @@ var result = document.getElementById('result');
 var resultvalue = "";
 var inputdata ="";
 
+
+
+function myFunction(runFunction){
+  var functionName = runFunction+"()";
+  if(runFunction == "deleteItem" || runFunction== "clearInput" || runFunction=="returnAnswer" || runFunction=="answerandclear"){
+  var func = new Function(functionName);
+  func();
+}else {
+  updateresult(runFunction);
+}
+  addclass();
+
+}
+
+
+
+
 /* Method sets both the value and placeholder of result to empty */
  function clearInput(){
    result.value = "";
    result.placeholder = "";
-   addclass();
   }
 
 /* Method allows user to delete last inputed character. Achieved using substr() method */
@@ -18,14 +34,13 @@ function deleteItem(){
   }
   result.placeholder = "";
   result.value = resultvalue.substr(0, resultvalue.length-1);
-  addclass();
  }
 
 /* Method concatenates result with user's input */
  function updateresult(userInput){
    var getuserInput = userInput;
    result.value += getuserInput;
-   addclass();
+   return;
 
  }
 
@@ -38,7 +53,6 @@ function returnAnswer(){
   solve();
   result.placeholder ="";
   result.value = inputdata;
-  addclass();
 
 }
 
@@ -51,7 +65,6 @@ function answerandclear(){
   solve();
   result.value = "";
   result.placeholder = inputdata;
-  addclass();
 }
 
 
